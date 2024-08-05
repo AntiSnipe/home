@@ -112,9 +112,21 @@ html {
 	<nav class="orbitron">
             <ul>
                 <li><a href="#">HOME</a></li>
-                <li><a href="https://mtnk-mtnk.github.io/mtnkclient">Mtnk client</a></li>
+                <li><a href="#" id="click">Mtnk client</a></li>
             </ul>
-        </nav>
-	</body>
+        </nav><!-- JavaScriptのコード -->
+<script>
+  // テキストリンクの要素を取得する
+  const click = document.getElementById("click");
+
+  // クリックされた際に実行する関数を定義する
+  function handleClick(event) {
+    event.preventDefault(); // リンクの遷移をキャンセルする
+    alert("Coming soon...");
+  }
+
+  // イベントを設定する
+  click.addEventListener("click", handleClick);
+</script>
 </body>
 </html>
