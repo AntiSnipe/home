@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>mtnky</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -136,6 +135,44 @@ html {
 
   // イベントを設定する
   click.addEventListener("click", handleClick);
+
+	
+    var rev = "fwd";
+    function titlebar(val){
+        var msg  = "extort.in front-end ;)";
+        var res = " ";
+        var speed = 70;
+        var pos = val;
+        msg = " ⁶⁶⁶ % 𖤐 -"+msg+"- 𖤐 ^ ♆ / 𖤐 - hehe nothing to see here :3 >.<";
+        var le = msg.length;
+        if(rev == "fwd"){
+            if(pos < le){
+                pos = pos+1;
+                scroll = msg.substr(0,pos);
+                document.title = scroll;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "bwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+        else {
+            if(pos > 0) {
+                pos = pos-1;
+                var ale = le-pos;
+                scrol = msg.substr(ale,le);
+                document.title = scrol;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "fwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+    }
+    titlebar(0);
+
 </script>
 </body>
 </html>
